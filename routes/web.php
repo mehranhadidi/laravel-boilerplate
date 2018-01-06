@@ -15,4 +15,10 @@ Route::group(['prefix' => 'account', 'middleware' => 'auth', 'namespace' => 'Acc
      */
     Route::get('/profile', 'ProfileController@index')->name('profile.index');
     Route::post('/profile', 'ProfileController@store')->name('profile.store');
+
+    /**
+     * Change Password
+     */
+    Route::get('/password', 'PasswordController@index')->name('password.index');
+    Route::post('/password', 'PasswordController@store')->name('password.store');
 });
