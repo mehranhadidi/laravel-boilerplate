@@ -19,6 +19,7 @@
         @include('layouts.partials._navigation')
 
         <div class="container">
+            @include('layouts.partials.alerts._alerts')
             @yield('content')
         </div>
     </div>

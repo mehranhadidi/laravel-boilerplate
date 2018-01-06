@@ -19,6 +19,6 @@ class ProfileController extends Controller
             $request->only('name', 'email')
         );
 
-        return back();
+        return back()->withSuccess('Account updated.');
     }
 }
