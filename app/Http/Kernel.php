@@ -57,5 +57,6 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'confirmation_token.expired' => \App\Http\Middleware\CheckExpiredConfirmationTokens::class,
     ];
 }
