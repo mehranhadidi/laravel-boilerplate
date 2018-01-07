@@ -38,11 +38,13 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    /** @noinspection PhpDocSignatureInspection */
     /**
      * When user logged in successfully
      *
      * @param Request $request
      * @param $user
+     * @return
      */
     protected function authenticated(Request $request, $user)
     {
