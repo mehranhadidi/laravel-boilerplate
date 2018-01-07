@@ -22,3 +22,7 @@ Route::group(['prefix' => 'account', 'middleware' => 'auth', 'namespace' => 'Acc
     Route::get('/password', 'PasswordController@index')->name('password.index');
     Route::post('/password', 'PasswordController@store')->name('password.store');
 });
+
+Route::group(['prefix' => 'activation', 'as' => 'activation.'], function () {
+    Route::get('/{confirmation_token}', 'Auth\\ActivationController@activate')->name('activate');
+});
